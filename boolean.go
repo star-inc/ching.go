@@ -4,7 +4,7 @@
 package nui
 
 func IsYes(key EnvKey) bool {
-	yesString := Get(key)
+	yesString := String(key)
 
 	return yesString == "yes"
 }

@@ -8,8 +8,8 @@ import (
 	"strconv"
 )
 
-func GetInt(key EnvKey, mode IntMode) any {
-	intString := Get(key)
+func Integer(key EnvKey, mode IntMode) any {
+	intString := String(key)
 
 	i, err := strconv.ParseInt(intString, 10, 64)
 	if err != nil {

@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-func Get(key EnvKey) string {
+func String(key EnvKey) string {
 	value, isKeyExists := os.LookupEnv(key.String())
 	if !isKeyExists {
 		log.Fatalf("nui lookup failed: %s", key)
@@ -17,8 +17,8 @@ func Get(key EnvKey) string {
 	return value
 }
 
-func GetSplited(key EnvKey) []string {
-	joinedString := Get(key)
+func StringList(key EnvKey) []string {
+	joinedString := String(key)
 	data := strings.Split(joinedString, ",")
 	for i, j := range data {
 		data[i] = strings.TrimSpace(j)
