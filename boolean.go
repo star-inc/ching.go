@@ -1,5 +1,5 @@
-// Nui.go
-// (c) 2022 Star Inc.
+// nui.go
+// (c) 2023 Star Inc.
 
 package nui
 
